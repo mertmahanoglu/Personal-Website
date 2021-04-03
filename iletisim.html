@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+
+        <title>Mert Mahanoğlu</title>
+
+
+        <link rel="stylesheet" type="text/css" href="default.css">
+
+
+    </head>
+
+    <body>
+
+
+        <script>
+            var i = 0;
+            var images = [];
+            var time = 3000;
+
+            images[0] = 'images/resim1.jpg';
+            images[1] = 'images/resim2.jpg';
+            images[2] = 'images/resim3.jpg';
+
+            function changeImg() {
+                document.slide.src = images[i];
+                if (i < images.length - 1) {
+                    i++
+                }
+                else {
+                    i = 0;
+                }
+
+                setTimeout("changeImg()", time);
+            }
+            window.onload = changeImg;
+            var slideIndex = 1;
+            showSlides(slideIndex);
+
+            // Next/previous controls
+            function plusSlides(n) {
+                showSlides(slideIndex += n);
+            }
+
+            // Thumbnail image controls
+            function currentSlide(n) {
+                showSlides(slideIndex = n);
+            }
+
+            function showSlides(n) {
+                var i;
+                var slides = document.getElementsByClassName("mySlides");
+                var dots = document.getElementsByClassName("dot");
+                if (n > slides.length) { slideIndex = 1 }
+                if (n < 1) { slideIndex = slides.length }
+                for (i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";
+                }
+                for (i = 0; i < dots.length; i++) {
+                    dots[i].className = dots[i].className.replace(" active", "");
+                }
+                slides[slideIndex - 1].style.display = "block";
+                dots[slideIndex - 1].className += " active";
+            }
+
+
+
+
+
+        </script>
+
+        <header>
+            <div class="container">
+
+                <div id="nameNLogo">
+                    <img src="images/mert.png" id="logoImg">
+                    <h1>Mahanoğlu Web Design</h1>
+                </div>
+
+                <nav class="menuNav">
+
+                    <div class="menu">
+
+                        <ul class="yatayAcilir">
+                            <li><a href="Anasayfa.html">Anasayfa</a></li>
+
+                            <li><a href="hakkimda.html">Hakkımızda</a>
+
+                            </li>
+
+                            <li><a href="Anasayfa.html">Çalışmalarım</a>
+
+                                <ul>
+                                    <li><a href="#" id="unity">Unity Projeleri</a></li>
+                                    <li><a href="#">Otomasyon Projeleri</a></li>
+                                    <li><a href="#" id="hr">İK Yönetim Sistemi</a></li>
+
+                                </ul>
+                            </li>
+
+                            <li><a href="iletisim.html">İletişim</a></li>
+
+                        </ul>
+
+
+                    </div>
+
+                </nav>
+
+
+            </div>
+        </header>
+
+
+        <div class="container">
+
+
+            <form class="anaDivForm">
+                <table border="2" class="tableIletisim">
+                    <tr>
+                        <td class="baslik">Ad :</td>
+                        <td class="input"><input type="text" name="Ad" required id="contact_message"></td>
+                    </tr>
+                    <tr>
+                        <td class="baslik">Soyad :</td>
+                        <td class="input"><input type="text" name="Soyad" required id="contact_message"></td>
+                    </tr>
+
+                    <tr>
+                        <td class="baslik">E-posta</td>
+                        <td class="input"><input type="email" name="Email" required id="contact_message"></td>
+                    </tr>
+
+                    <tr>
+                        <td class="baslik">Telefon</td>
+                        <td class="input"><input type="number" name="Telefon" id="contact_message"></td>
+                    </tr>
+
+                    <tr>
+                        <td class="baslik">Doğum Tarihi</td>
+                        <td class="input"><input type="date" name="Dogum" id="contact_message" max="2020-12-3">
+                        </td>
+                    </tr>
+
+
+
+                    </tr>
+
+                    <tr>
+                        <td class="baslik">Cinsiyet</td>
+                        <td class="input">
+                            K<input type="radio" name="radioC" id="kadin" checked>
+                            E<input type="radio" name="radioC" id="erkek">
+                        </td>
+                    </tr>
+
+
+
+
+                    <tr>
+                        <td class="baslik">Görüş:</td>
+                        <td class="input"><textarea cols="20" rows="5" placeholder="GÖRÜŞÜNÜZ BİZİM İÇİN ÖNEMLİ"
+                                name="gorus"></textarea></td>
+                    </tr>
+
+                    <tr>
+                        <td colspan="2" class="input">
+                            <input type="submit" value="KAYDET">
+                            <input type="reset" value="TEMİZLE">
+
+                        </td>
+                    </tr>
+                </table>
+
+            </form>
+
+        </div>
+
+
+
+        <footer class="bilgiFooter">
+
+            <p>E-posta : mahanoglumert73@gmail.com</p>
+            <p>Telefon : 0546 641 67 70</p>
+            <p>Adres : Hatay/Antakya</p>
+            <p>Mahanoğlu Web Design, Copyright&copy;2020</p>
+        </footer>
+
+
+    </body>
+
+</html>

@@ -1,0 +1,463 @@
+body
+{
+    font-family: Arial,Helvetica,sans-serif;
+    font-size: 15px;
+    line-height: 1.5;
+   /* bunu font:15px/1.5 Arial,Helvetica,sans-serif diye de yazabilirdik kısa olarak  */    
+    background-color: white;
+    margin: 0;
+    padding: 0;
+    width: auto;
+
+}
+
+.showcase
+{
+    background-position: center;
+    min-height: 400px;
+    width: auto;
+
+}
+
+.container
+{
+   width: auto;
+   max-width: 80%;
+  
+    margin:auto;
+    overflow: hidden;
+    
+}
+
+#logoImg{
+    width: 50px;
+    height: 50px;
+    float: left;
+    margin-top: 15px;
+    padding-right: 5px;
+}
+
+
+
+header
+{
+    background: #000;
+   
+  
+    padding-top: 30px;
+    color: #ffffff;
+    min-height: 70px;   
+    border-bottom: #311de8 solid 3px;
+    font-weight: bold;
+}
+
+header ul{
+   margin: 0;
+   padding: 0;
+}
+
+header h1{
+   margin: 0;
+   padding-top: 15px;
+  
+}
+
+header a
+{
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 16px;
+    
+}
+
+header nav
+{
+    float:right;
+    
+}
+
+
+#nameNLogo{
+    float: left;
+    
+    width: 450px;
+}
+.menuNav{
+   margin-top: 30px;
+}
+.menu ul
+{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    z-index: 5000;
+   
+
+}
+
+
+.menu li
+{
+    float: left; /*veya float:left; yapılarakta menüyü yatay olarak pozisyonlayabiliriz.*/
+   position: relative;
+   width: 150px;
+
+   text-align: center;
+}
+
+
+.menu li ul
+{
+   display: none;
+   left: 0; /*Dikey menü için de css dosyası birebir aynıdır. Sadece left 110px top 0 yapılmalı*/
+   position: absolute;
+   top:23px;
+   margin-top: 2px;
+
+}
+#unity{
+   height: 25px;
+   padding-top: 10px;
+}
+#hr{
+   height: 40px;  
+   padding-top: 10px;
+
+}
+.menu ul li a
+{
+   border-radius: 10px;
+   background-color: #000;
+   border-style: solid;
+   border-width: 3px;
+   border-color: black;
+   color: #fff;
+   display: block;
+   margin: 0;
+   
+   line-height: 16px;
+   padding:2px 2px;
+   font: bold 12px;
+   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+
+.menu ul li a:hover
+{
+   background:rgb(53, 53, 53);
+   color: #fff;
+
+}
+.menu li:hover ul
+{
+   display: block;
+   position: static;
+
+}
+
+.menuNav{
+    float: right;
+}
+
+.bilgiFooter{
+    background: #000000d5;
+    color: #ffffff;
+    text-align: center;
+    border-top:  #311de8 solid 3px;
+}
+
+.bilgiFooter p{
+    margin: 0;
+    padding:0;
+}
+
+#duyurular
+{
+   
+    background-color: #e8491d;
+}
+#duyurular .duyuru
+{
+  
+    float: left;
+
+    text-align: center;
+}
+
+
+
+
+
+
+#duyurular .duyuru img
+{
+   width: 90;
+}
+
+.duyuru {
+   justify-content: center;
+   text-align: center;
+}
+.haberField{
+
+    width: auto;
+    background-color: #e8491d;
+    color: #ffffff;
+}
+.duyuruField{
+
+   width: auto;
+   background-color: #e8491d;
+   color: #ffffff;
+
+}
+
+.unityField{
+
+width: auto;  
+display: block;
+background-color: #e8491d;
+color: #ffffff;
+}
+
+
+
+.unityDiv2{
+ 
+ text-align: center;
+}
+
+
+#bilgiler
+{
+    margin-top: 20px;
+    width: auto;
+    margin: auto;
+    text-align: center;
+}
+#bilgiler .bilgi
+{
+
+   width: auto;
+   max-width: 300px;
+   float: left;
+    padding: 10px;
+   margin-left: 60px;
+    text-align: center;  
+}
+
+#bilgiler h1{
+max-width: 15%; 
+margin-top: 50px;
+margin-left: auto;
+margin-right: auto;
+
+margin-bottom: auto;
+
+}
+
+
+/* Slideshow container */
+.slideshow-container {
+   
+   max-width: 1000px;
+  margin-top: 5px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: auto;
+  position: relative;
+
+}
+.slideshow-container img {
+   max-width: 1000px;
+   border: 4px solid grey;
+
+   height: 400px;
+   margin: auto;
+   position: relative;
+ 
+ }
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+
+
+
+
+ .cvEmbed{
+    height: 800px;
+    margin: 10px auto;
+    width: 90%;
+    display: block;
+    color: rgb(187, 186, 186);
+    align-items: center;
+  
+    background-color: rgba(31, 31, 1, 0.644);
+
+}
+
+.tableIletisim{
+width: 45%;
+height: 600px;
+text-align: center;
+position: relative;
+margin-left: auto;
+margin-right: auto;
+margin-top: 10px;
+margin-bottom: 10px;
+}
+
+
+.projects{
+   margin: 10px auto;
+   width: 100%;
+   display: flex;
+}
+
+#projectImg{
+margin:  0 auto;
+float: left; 
+width: 60%;
+   }
+
+
+#projectImg img{   
+margin: 0 auto;
+border-color: black;
+border-radius: 20px;
+width: 500px;
+height: 400px;
+
+}
+
+#projectDesc{
+float: right;
+width: 40%;
+padding-right: 100px;
+padding-top:50px;
+text-align: left;
+
+}
+
+
+#projectDesc h1{
+
+   padding-left: 130px;
+   width:200px;
+   font-family: 'Times New Roman', Times, serif;
+   font-weight: bold;
+}
+#projectDesc p{
+   padding-left: 20px;
+   width: 450px;
+   font-family: Arial, Helvetica, sans-serif;
+   font-size: 15pt;
+}
+
+
+#projectDesc  #platformer{
+   width: 300px;
+   padding-left: 85px;
+}
+
+
+.projects a {
+   background-color: #e8491d;
+   color: white;
+   margin-left: 100px;
+   padding: 1em 1.5em;
+   text-decoration: none;
+   text-transform: uppercase;
+ }
+ 
+ .projects a:hover {
+   background-color: #e8491dcc;
+ }
+ 
+ .projects a:active {
+   background-color: black;
+ }
